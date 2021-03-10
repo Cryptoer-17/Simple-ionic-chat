@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'chatbot',
+    redirectTo: 'chat',
     pathMatch: 'full'
   },
   {
