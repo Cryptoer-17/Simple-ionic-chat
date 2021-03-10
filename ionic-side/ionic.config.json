@@ -1,5 +1,7 @@
 {
   "name": "ionic-side",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

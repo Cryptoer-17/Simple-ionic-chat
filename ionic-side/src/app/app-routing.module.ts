@@ -8,9 +8,14 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'chat',
+    redirectTo: 'chatbot',
     pathMatch: 'full'
   },
+  {
+    path: 'chatbot',
+    loadChildren: () => import('./chatbot/chatbot.module').then( m => m.ChatbotPageModule)
+  },
+
 ];
 
 @NgModule({
