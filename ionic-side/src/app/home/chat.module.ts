@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
+import { ChatPage } from './chat.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { ChatPageRoutingModule } from './chat-routing.module';
 import { AutosizeModule } from 'ngx-autosize';
 
 
@@ -13,9 +13,9 @@ import { AutosizeModule } from 'ngx-autosize';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    ChatPageRoutingModule,
     AutosizeModule
   ],
-  declarations: [HomePage]
+  declarations: [ChatPage]
 })
-export class HomePageModule {}
+export class ChatPageModule {}

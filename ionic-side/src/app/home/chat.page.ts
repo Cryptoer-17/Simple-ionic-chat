@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonContent, ToastController } from '@ionic/angular';
 import { Socket } from 'ngx-socket-io';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-chat',
+  templateUrl: 'chat.page.html',
+  styleUrls: ['chat.page.scss'],
 })
-export class HomePage implements OnInit{
+export class ChatPage implements OnInit{
+  @ViewChild(IonContent) content: IonContent;
+
   message = '';
   messages = [];
   currentUser = '';
@@ -41,6 +43,11 @@ export class HomePage implements OnInit{
   sendMessage(){
     this.socket.emit('send-message', {text: this.message});
     this.message = '';
+
+    setTimeout(() => {
+      this.content.scrollToBottom(200);
+    }, 200);
+
   }
 
   ionViewWillLeave(){
