@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Kommunicate } from '@ionic-native/kommunicate/ngx';
-
-
-
 @Component({
   selector: 'app-chatbot',
   templateUrl: './chatbot.page.html',
@@ -11,7 +7,7 @@ import { Kommunicate } from '@ionic-native/kommunicate/ngx';
 })
 export class ChatbotPage implements OnInit {
 
-  constructor(private kommunicate: Kommunicate) { }
+  constructor() { }
 
   ngOnInit() {
     (function(d, m){
